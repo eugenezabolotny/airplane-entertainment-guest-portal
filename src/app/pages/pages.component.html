@@ -1,0 +1,43 @@
+<!-- Container for sidebar(s) + page content -->
+<ng-sidebar-container>
+    <!-- A sidebar -->
+    <ng-sidebar [(opened)]="_opened">
+        <ul>
+            <li routerLinkActive="active">
+                <span class="icons icon-sidebar icon-home"></span>
+                <a routerLink="/home" (click)="_opened = !_opened">{{'CATEGORY.HOME' | translate}}</a>
+            </li>
+            <li routerLinkActive="active">
+                <span class="icons icon-sidebar icon-movies"></span>
+                <a routerLink="/movies" (click)="_opened = !_opened">{{'CATEGORY.MOVIES' | translate}}</a>
+            </li>
+            <li routerLinkActive="active">
+                <span class="icons icon-sidebar icon-tv-shows"></span>
+                <a routerLink="/tv-shows" (click)="_opened = !_opened">{{'CATEGORY.TV_SHOWS' | translate}}</a>
+            </li>
+            <li routerLinkActive="active">
+                <span class="icons icon-sidebar icon-music"></span>
+                <a routerLink="/music" (click)="_opened = !_opened">{{'CATEGORY.MUSIC' | translate}}</a>
+            </li>
+            <li routerLinkActive="active">
+                <span class="icons icon-sidebar icon-games"></span>
+                <a routerLink="/games" (click)="_opened = !_opened">{{'CATEGORY.GAMES' | translate}}</a>
+            </li>
+            <li routerLinkActive="active">
+                <span class="icons icon-sidebar icon-flight-status"></span>
+                <a routerLink="/flight-status" (click)="_opened = !_opened">{{'CATEGORY.FLIGHT_STATUS' | translate}}</a>
+            </li>
+            <li routerLinkActive="active">
+                <span class="icons icon-sidebar icon-settings"></span>
+                <a routerLink="/settings" (click)="_opened = !_opened">{{'CATEGORY.SETTINGS' | translate}}</a>
+            </li>
+        </ul>
+    </ng-sidebar>
+
+    <!-- Page content -->
+    <div ng-sidebar-content>
+        <app-header (onToggledSideBar)="onToggledSideBar($event)" [opened]="_opened"></app-header>
+        <router-outlet></router-outlet>
+    </div>
+
+</ng-sidebar-container>

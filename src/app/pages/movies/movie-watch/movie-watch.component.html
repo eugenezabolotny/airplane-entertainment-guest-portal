@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="row">
+        <a routerLink="/movies/{{movie?.id}}" class="back-button col-12">
+            <i class="fa fa-angle-left" aria-hidden="true"></i>{{'MOVIES.MOVIE.BACK_BUTTON' | translate}}
+        </a>
+        <div class="col-12">
+            <vg-player>
+                <vg-overlay-play></vg-overlay-play>
+                <vg-buffering></vg-buffering>
+
+                <vg-scrub-bar>
+                    <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                    <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>
+                </vg-scrub-bar>
+
+                <vg-controls>
+                    <vg-play-pause></vg-play-pause>
+
+                    <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+
+                    <vg-scrub-bar></vg-scrub-bar>
+
+                    <vg-time-display vgProperty="left" vgFormat="mm:ss"></vg-time-display>
+                    <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+
+                    <vg-mute></vg-mute>
+                    <vg-volume></vg-volume>
+
+                    <vg-fullscreen></vg-fullscreen>
+                </vg-controls>
+
+                <video #myMedia [vgMedia]="myMedia" id="my-video" type="video/mp4" poster="{{movie?.poster}}" crossorigin
+                       [vgHls]="movie?.path ? movie.path : 'assets/video/20170521_123403.mp4'"
+                       [vgDash]="movie?.path ? movie.path : 'assets/video/20170521_123403.mp4'">
+                </video>
+            </vg-player>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,140 @@
+{
+  "CATEGORY": {
+    "HOME": "Домашня",
+    "MOVIES": "Кіно",
+    "TV_SHOWS": "ТВ-шоу",
+    "MUSIC": "Музика",
+    "GAMES": "Ігри",
+    "FLIGHT_STATUS": "Статус Польоту",
+    "SETTINGS": "Налаштування"
+  },
+  "HOME": {
+    "REQUEST_ASSISTANCE": "Попросити Допомогу",
+    "VIEW_MENU": "Переглянути Меню"
+  },
+  "MOVIES": {
+    "CATEGORY": {
+      "ALL": "Усі",
+      "ACTION": "Пригодницькі",
+      "COMEDY": "Комедія",
+      "DRAMA": "Драма",
+      "KIDS": "Дитяче",
+      "THRILLER": "Триллер"
+    },
+    "MOVIE": {
+      "BACK_BUTTON": "Назад",
+      "DIRECTOR": "Режисер",
+      "WRITERS": "Сценарист",
+      "STARS": "Актори",
+      "VIEW_TRAILER": "Переглянути Трейлер",
+      "WATCH_MOVIE": "Дивитися Кіно"
+    }
+  },
+  "FLIGHT_STATUS": {
+    "LATITUDE": {
+      "TITLE": "Широта",
+      "VALUE": "° Пн"
+    },
+    "LONGITUDE": {
+      "TITLE": "Довгота",
+      "VALUE": "° Зх"
+    },
+    "GROUND_SPEED": {
+      "TITLE": "Наземна швидкість",
+      "VALUE": "Вузлів"
+    },
+    "TRACK_ANGLE": {
+      "TITLE": "Кут Напрямку",
+      "VALUE": "°"
+    },
+    "ROLL_ANGLE": {
+      "TITLE": "Кут Крена",
+      "VALUE": "° N"
+    },
+    "ROLL_RATE": {
+      "TITLE": "Оберти",
+      "VALUE": "Deg/Sec"
+    },
+    "ALTITUDE": "Висота",
+    "VERTICAL_VELOCITY": {
+      "TITLE": "Вертикальна Швидкість",
+      "VALUE": "Футів/Хвилину"
+    },
+    "DESTINATION_ETA": "Пункт Призначення ПВП",
+    "TIME_UTC": "Час по UTC",
+    "TIME_UTS": "Час по UTS",
+    "DATE": "Дата",
+    "FLIGHT_LEG": "Сегменти Польоту",
+    "FLIGHT_NUMBER": "Номер Рейсу",
+    "DISTANCE_TO_GO": {
+      "TITLE": "Відсталь польоту",
+      "VALUE": "Миль"
+    },
+    "TIME_TO_GO": "Час польоту",
+    "ORIGIN_AIRPORT": "Аеропорт Відправлення",
+    "DESTINATION_AIRPORT": "Аеропорт Прибуття"
+  },
+  "LOGIN": {
+    "NAME": {
+      "TITLE": "Ім'я",
+      "MIN_LENGTH_ERROR": "Мінімальна кільксть 2 символи",
+      "MAX_LENGTH_ERROR": "Максимальна кільксть 30 символів",
+      "REQUIRED_ERROR": "Ім'я є обов'язковим"
+    },
+    "EMAIL_ADDRESS": {
+      "TITLE": "Електронна Адреса",
+      "INCORRECT_FORMAT_ERROR": "Некоректний формат електронної адреси",
+      "REQUIRED_ERROR": "Електронна адреса є обов'язковою"
+    },
+    "AGREEMENT": {
+      "TITLE": "Цим підтверджую, що я прочитав і зрозумів положення та умови",
+      "REQUIRED_ERROR": "Необхідно погодитися з умовами"
+    },
+    "INVALID_CREDENTIALS": "Некоректні дані імені чи електронної адреси",
+    "SUBMIT": "Підтвердити"
+  },
+  "SETTINGS": {
+    "CATEGORY": {
+      "ABOUT": {
+        "TITLE": "Про",
+        "TEXT1": "Демонстраційна аплікація",
+        "TEXT2": "Копірайт © 2018.",
+        "TEXT3": "Всі права захищено.",
+        "TEXT4": "Зареєстровані торгові марки"
+      },
+      "ACCESSIBILITY": {
+        "TITLE": "Доступність",
+        "VISION": {
+          "TITLE": "Видимість",
+          "VOICE_OVER": "Закадровий Переклад",
+          "ZOOM": "Масштаб",
+          "MAGNIFIER": "Лупа",
+          "BOLD_TEXT": "Жирний Текст",
+          "INCREASE_CONTRAST": "Збільшити Контраст"
+        },
+        "MEDIA": {
+          "TITLE":"Медіа",
+          "SUBTITLES_AND_CAPTIONING":"Субтитри та Підписи",
+          "AUDIO_DESCRIPTIONS":"Аудіодубляж"
+        },
+        "HEARING": {
+          "TITLE": "Прослуховування",
+          "TTY": "Телетайп"
+        }
+      },
+      "LANGUAGE": {
+        "TITLE": "Мова",
+        "CHINESE": "Китайська",
+        "DANISH": "Датська",
+        "ENGLISH": "Англійська",
+        "FRENCH": "Французька",
+        "GERMAN": "Німецька",
+        "ITALIAN": "Італійська",
+        "JAPANESE": "Японська",
+        "SPANISH": "Іспанська",
+        "TURKISH": "Турецька",
+        "UKRAINIAN": "Українська"
+      }
+    }
+  }
+}

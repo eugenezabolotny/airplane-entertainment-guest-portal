@@ -1,0 +1,31 @@
+vg-player {
+  height: 600px;
+
+  vg-scrub-bar {
+    height: 7px;
+
+    vg-scrub-bar-current-time,
+    vg-scrub-bar-buffering-time {
+      height: 7px;
+    }
+  }
+
+  vg-controls {
+    vg-scrub-bar {
+      pointer-events: none;
+    }
+  }
+
+  video {
+    height: 600px;
+    width: 100%;
+  }
+
+  &.native-fullscreen {
+    height: 100%;
+
+    video {
+      height: 100%;
+    }
+  }
+}

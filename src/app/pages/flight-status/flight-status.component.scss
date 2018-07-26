@@ -1,0 +1,26 @@
+.flight-status {
+  column-gap: 40px;
+  column-rule: 1px solid white;
+  width: 100%;
+
+  .status {
+    display: flex;
+    width: 100%;
+
+    p {
+      width: 50%;
+    }
+
+    .property {
+      color: dimgrey;
+    }
+  }
+
+  @media (min-width: 767px) and (max-width: 991px) {
+    column-count: 2;
+  }
+
+  @media (min-width: 992px) {
+    column-count: 3;
+  }
+}

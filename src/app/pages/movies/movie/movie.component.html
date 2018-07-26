@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row">
+        <a routerLink="/movies" class="back-button col-12">
+            <i class="fa fa-angle-left" aria-hidden="true"></i>{{'MOVIES.MOVIE.BACK_BUTTON' | translate}}
+        </a>
+        <div class="poster col-12 col-sm-5">
+            <img src="{{moviesService.preparePathToCover(movie?.cover)}}" alt="{{movie?.name}}">
+            <!--<img src="/api/src/movies/{{movie?.cover}}" alt="{{movie?.name}}">-->
+        </div>
+        <div class="description col-12 col-sm-7">
+            <h3>{{movie?.name}}</h3>
+            <p>{{movie?.age}} | {{movie?.duration}}</p>
+            <p>{{movie?.description}}</p>
+            <p>{{'MOVIES.MOVIE.DIRECTOR' | translate}}: {{movie?.director}}</p>
+            <p>{{'MOVIES.MOVIE.WRITERS' | translate}}: {{movie?.writers}}</p>
+            <p>{{'MOVIES.MOVIE.STARS' | translate}}: {{movie?.stars}}</p>
+            <a role="button" class="btn btn-action">{{'MOVIES.MOVIE.VIEW_TRAILER' | translate}}</a>
+            <a routerLink="/movies/{{movie?.id}}/watch" role="button" class="btn btn-action">
+                {{'MOVIES.MOVIE.WATCH_MOVIE' | translate}}
+            </a>
+        </div>
+    </div>
+</div>

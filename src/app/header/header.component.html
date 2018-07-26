@@ -1,0 +1,11 @@
+<nav class="navbar navbar-expand navbar-dark">
+    <button type="button" (click)="toggleSidebar()">
+        <span class="icons icon-header" [ngClass]="{'icon-opened': opened, 'icon-closed': !opened}"></span>
+    </button>
+
+    <div class="fly-progress">
+        <div class="progress">
+            <div class="plane"></div>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,99 @@
+/deep/ tabset {
+  @media (min-width: 576px) {
+    padding: 0 !important;
+
+    div.tab-content,
+    ul.nav {
+      display: inline-block;
+      float: left;
+    }
+
+    ul.nav {
+      width: 30%;
+    }
+
+    div.tab-content {
+      width: 70%;
+    }
+  }
+
+  @media (max-width: 575px) {
+    div.tab-content {
+      margin-top: 40px;
+    }
+  }
+
+  ul.nav {
+    &.nav-tabs {
+      border: none;
+
+      li {
+        padding: 0.5rem 0;
+
+        a {
+          border: none;
+          color: black;
+          padding: 0;
+          position: relative;
+
+          &.active {
+            background-color: transparent;
+            color: black;
+
+            &:before {
+              border: 2px solid;
+              bottom: 0;
+              content: '';
+              position: absolute;
+              left: -10px;
+              top: 0;
+            }
+          }
+
+          &:focus,
+          &:hover {
+            border: none;
+            outline: none;
+          }
+        }
+      }
+    }
+  }
+
+  div.tab-content {
+    .category {
+      margin-bottom: 40px;
+
+      h5 {
+        font-size: 16px;
+        margin: 0 0 12px;
+        text-transform: uppercase;
+      }
+
+      p {
+        display: inline-block;
+        margin-bottom: 0;
+        width: 100%;
+
+        label {
+          float: left;
+          font-size: 18px;
+
+          &:not(.switch) {
+            height: 30px;
+            margin: 0;
+          }
+
+          &.switch {
+            margin: 5px 10px 5px 0;
+          }
+
+          &:focus,
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

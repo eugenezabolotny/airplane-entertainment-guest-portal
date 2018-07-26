@@ -1,0 +1,140 @@
+{
+  "CATEGORY": {
+    "HOME": "Home",
+    "MOVIES": "Movies",
+    "TV_SHOWS": "TV Shows",
+    "MUSIC": "Music",
+    "GAMES": "Games",
+    "FLIGHT_STATUS": "Flight Status",
+    "SETTINGS": "Settings"
+  },
+  "HOME": {
+    "REQUEST_ASSISTANCE": "Request Assistance",
+    "VIEW_MENU": "View Menu"
+  },
+  "MOVIES": {
+    "CATEGORY": {
+      "ALL": "All",
+      "ACTION": "Action",
+      "COMEDY": "Comedy",
+      "DRAMA": "Drama",
+      "KIDS": "Kids",
+      "THRILLER": "Thriller"
+    },
+    "MOVIE": {
+      "BACK_BUTTON": "Back",
+      "DIRECTOR": "Director",
+      "WRITERS": "Writers",
+      "STARS": "Stars",
+      "VIEW_TRAILER": "View Trailer",
+      "WATCH_MOVIE": "Watch Movie"
+    }
+  },
+  "FLIGHT_STATUS": {
+    "LATITUDE": {
+      "TITLE": "Latitude",
+      "VALUE": "° N"
+    },
+    "LONGITUDE": {
+      "TITLE": "Longitude",
+      "VALUE": "° W"
+    },
+    "GROUND_SPEED": {
+      "TITLE": "Ground Speed",
+      "VALUE": "Knots"
+    },
+    "TRACK_ANGLE": {
+      "TITLE": "Track Angle",
+      "VALUE": "°"
+    },
+    "ROLL_ANGLE": {
+      "TITLE": "Roll Angle",
+      "VALUE": "°"
+    },
+    "ROLL_RATE": {
+      "TITLE": "Roll Rate",
+      "VALUE": "Deg/Sec"
+    },
+    "ALTITUDE": "Altitude",
+    "VERTICAL_VELOCITY": {
+      "TITLE": "Vertical Velocity",
+      "VALUE": "Feet/Min"
+    },
+    "DESTINATION_ETA": "Destination ETA",
+    "TIME_UTC": "Time UTC",
+    "TIME_UTS": "Time UTS",
+    "DATE": "Date",
+    "FLIGHT_LEG": "Flight Leg",
+    "FLIGHT_NUMBER": "Flight Number",
+    "DISTANCE_TO_GO": {
+      "TITLE": "Distance To Go",
+      "VALUE": "Miles"
+    },
+    "TIME_TO_GO": "Time To Go",
+    "ORIGIN_AIRPORT": "Origin Airport",
+    "DESTINATION_AIRPORT": "Destination Airport"
+  },
+  "LOGIN": {
+    "NAME": {
+      "TITLE": "Name",
+      "MIN_LENGTH_ERROR": "Min length of 2 symbols",
+      "MAX_LENGTH_ERROR": "Max length of 30 symbols",
+      "REQUIRED_ERROR": "Name is required"
+    },
+    "EMAIL_ADDRESS": {
+      "TITLE": "Email Address",
+      "INCORRECT_FORMAT_ERROR": "Incorrect email format",
+      "REQUIRED_ERROR": "E-mail is required"
+    },
+    "AGREEMENT": {
+      "TITLE": "I hereby acknowledge that I have read and understood the terms and conditions",
+      "REQUIRED_ERROR": "Checkbox is required"
+    },
+    "INVALID_CREDENTIALS": "Invalid name or e-mail address",
+    "SUBMIT": "Submit"
+  },
+  "SETTINGS": {
+    "CATEGORY": {
+      "ABOUT": {
+        "TITLE": "About",
+        "TEXT1": "ASTRONICS CSC INFLIGHT DEMONSTRATION APPLICATION",
+        "TEXT2": "Copyright © 2018. Telefonix, Inc. and Product Development Technologies, LLC.",
+        "TEXT3": "All Rights Reserved.",
+        "TEXT4": "Telefonix® is a registered trademark of Telefonix, Inc. Telefonix PDTTM is a trademark of Telefonix, Inc."
+      },
+      "ACCESSIBILITY": {
+        "TITLE": "Accessibility",
+        "VISION": {
+          "TITLE": "Vision",
+          "VOICE_OVER": "Voice Over",
+          "ZOOM": "Zoom",
+          "MAGNIFIER": "Magnifier",
+          "BOLD_TEXT": "Bold Text",
+          "INCREASE_CONTRAST": "Increase Contrast"
+        },
+        "MEDIA": {
+          "TITLE":"Media",
+          "SUBTITLES_AND_CAPTIONING":"Subtitles & Captioning",
+          "AUDIO_DESCRIPTIONS":"Audio Descriptions"
+        },
+        "HEARING": {
+          "TITLE": "Hearing",
+          "TTY": "TTY"
+        }
+      },
+      "LANGUAGE": {
+        "TITLE": "Language",
+        "CHINESE": "Chinese",
+        "DANISH": "Danish",
+        "ENGLISH": "English",
+        "FRENCH": "French",
+        "GERMAN": "German",
+        "ITALIAN": "Italian",
+        "JAPANESE": "Japanese",
+        "SPANISH": "Spanish",
+        "TURKISH": "Turkish",
+        "UKRAINIAN": "Ukrainian"
+      }
+    }
+  }
+}

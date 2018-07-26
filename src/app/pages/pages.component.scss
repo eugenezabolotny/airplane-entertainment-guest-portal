@@ -1,0 +1,45 @@
+ng-sidebar-container {
+  background: url(/assets/img-min/banners/bg_inner.jpg) no-repeat center;
+  background-size: cover;
+  height: 100vh;
+
+  /deep/ aside {
+    margin-top: 70px; // offset of header height
+    width: 315px;
+
+    ul {
+      background-color: rgb(204, 204, 204);
+      list-style: none;
+      margin-bottom: 0;
+      padding: 30px 20px 30px 25px;
+
+      li {
+        border-top: 1px solid white;
+        padding-left: 35px;
+        text-transform: uppercase;
+
+        &:last-of-type {
+          border-bottom: 1px solid white;
+        }
+
+        a {
+          color: black;
+          display: block;
+          outline: none;
+          padding: 29px 0;
+          text-decoration: none;
+        }
+
+        &:focus,
+        &:hover {
+          cursor: pointer;
+        }
+
+        .icons {
+          float: left;
+          margin: 25px 15px 20px 0;
+        }
+      }
+    }
+  }
+}

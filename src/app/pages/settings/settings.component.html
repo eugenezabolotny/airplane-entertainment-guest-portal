@@ -1,0 +1,160 @@
+<div class="container">
+    <div class="row">
+        <h1 class="title ">{{'CATEGORY.SETTINGS' | translate}}</h1>
+        <tabset class="col-12" [vertical]="true">
+            <tab id="about" heading="{{'SETTINGS.CATEGORY.ABOUT.TITLE' | translate}}" active="true">
+                <div class="category">
+                    <h5>{{'SETTINGS.CATEGORY.ABOUT.TEXT1' | translate}}</h5>
+                    <p>{{'SETTINGS.CATEGORY.ABOUT.TEXT2' | translate}}</p>
+                    <p>{{'SETTINGS.CATEGORY.ABOUT.TEXT3' | translate}}</p>
+                    <p>{{'SETTINGS.CATEGORY.ABOUT.TEXT4' | translate}}</p>
+                </div>
+            </tab>
+            <tab id="accessibility" heading="{{'SETTINGS.CATEGORY.ACCESSIBILITY.TITLE' | translate}}" >
+                <div class="category">
+                    <h5>{{'SETTINGS.CATEGORY.ACCESSIBILITY.VISION.TITLE' | translate}}</h5>
+                    <p>
+                        <label for="voiceOver" class="switch">
+                            <input id="voiceOver" type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                        <label for="voiceOver">{{'SETTINGS.CATEGORY.ACCESSIBILITY.VISION.VOICE_OVER' | translate}}</label>
+                    </p>
+                    <p>
+                        <label for="zoom" class="switch">
+                            <input id="zoom" type="checkbox" [checked]="true">
+                            <span class="slider"></span>
+                        </label>
+                        <label for="zoom">{{'SETTINGS.CATEGORY.ACCESSIBILITY.VISION.ZOOM' | translate}}</label>
+                    </p>
+                    <p>
+                        <label for="magnifier" class="switch">
+                            <input id="magnifier" type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                        <label for="magnifier">{{'SETTINGS.CATEGORY.ACCESSIBILITY.VISION.MAGNIFIER' | translate}}</label>
+                    </p>
+                    <p>
+                        <label for="boldText" class="switch">
+                            <input id="boldText" type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                        <label for="boldText">{{'SETTINGS.CATEGORY.ACCESSIBILITY.VISION.BOLD_TEXT' | translate}}</label>
+                    </p>
+                    <p>
+                        <label for="increaseContrast" class="switch">
+                            <input id="increaseContrast" type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                        <label for="increaseContrast">
+                            {{'SETTINGS.CATEGORY.ACCESSIBILITY.VISION.INCREASE_CONTRAST' | translate}}</label>
+                    </p>
+                </div>
+                <div class="category">
+                    <h5>{{'SETTINGS.CATEGORY.ACCESSIBILITY.MEDIA.TITLE' | translate}}</h5>
+                    <p>
+                        <label for="subtitlesAndCaptioning" class="switch">
+                            <input id="subtitlesAndCaptioning" type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                        <label for="subtitlesAndCaptioning">
+                            {{'SETTINGS.CATEGORY.ACCESSIBILITY.MEDIA.SUBTITLES_AND_CAPTIONING' | translate}}</label>
+                    </p>
+                    <p>
+                        <label for="audioDescriptions" class="switch">
+                            <input id="audioDescriptions" type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                        <label for="audioDescriptions">
+                            {{'SETTINGS.CATEGORY.ACCESSIBILITY.MEDIA.AUDIO_DESCRIPTIONS' | translate}}</label>
+                    </p>
+                </div>
+                <div class="category">
+                    <h5>{{'SETTINGS.CATEGORY.ACCESSIBILITY.HEARING.TITLE' | translate}}</h5>
+                    <p>
+                        <label for="tty" class="switch">
+                            <input id="tty" type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                        <label for="tty">{{'SETTINGS.CATEGORY.ACCESSIBILITY.HEARING.TTY' | translate}}</label>
+                    </p>
+                </div>
+            </tab>
+            <tab id="language" heading="{{'SETTINGS.CATEGORY.LANGUAGE.TITLE' | translate}}">
+                <div class="category">
+                    <h5>{{'SETTINGS.CATEGORY.LANGUAGE.TITLE' | translate}}</h5>
+                    <!--<p (click)="setCurrentLang('zh')">-->
+                        <!--<label class="switch">-->
+                            <!--<span [ngClass]="{'checked': currentLang === 'zh'}"></span>-->
+                            <!--<span class="slider"></span>-->
+                        <!--</label>-->
+                        <!--<label>{{'SETTINGS.CATEGORY.LANGUAGE.CHINESE' | translate}}</label>-->
+                    <!--</p>-->
+                    <!--<p (click)="setCurrentLang('da')">-->
+                        <!--<label class="switch">-->
+                            <!--<span [ngClass]="{'checked': currentLang === 'da'}"></span>-->
+                            <!--<span class="slider"></span>-->
+                        <!--</label>-->
+                        <!--<label>{{'SETTINGS.CATEGORY.LANGUAGE.DANISH' | translate}}</label>-->
+                    <!--</p>-->
+                    <p (click)="setCurrentLang('en')">
+                        <label class="switch" >
+                            <span [ngClass]="{'checked': currentLang === 'en'}"></span>
+                            <span class="slider"></span>
+                        </label>
+                        <label>{{'SETTINGS.CATEGORY.LANGUAGE.ENGLISH' | translate}}</label>
+                    </p>
+                    <!--<p (click)="setCurrentLang('fr')">-->
+                        <!--<label class="switch">-->
+                            <!--<span [ngClass]="{'checked': currentLang === 'fr'}"></span>-->
+                            <!--<span class="slider"></span>-->
+                        <!--</label>-->
+                        <!--<label>{{'SETTINGS.CATEGORY.LANGUAGE.FRENCH' | translate}}</label>-->
+                    <!--</p>-->
+                    <!--<p (click)="setCurrentLang('de')">-->
+                        <!--<label class="switch" >-->
+                            <!--<span [ngClass]="{'checked': currentLang === 'de'}"></span>-->
+                            <!--<span class="slider"></span>-->
+                        <!--</label>-->
+                        <!--<label>{{'SETTINGS.CATEGORY.LANGUAGE.GERMAN' | translate}}</label>-->
+                    <!--</p>-->
+                    <!--<p (click)="setCurrentLang('it')">-->
+                        <!--<label class="switch">-->
+                            <!--<span [ngClass]="{'checked': currentLang === 'it'}"></span>-->
+                            <!--<span class="slider"></span>-->
+                        <!--</label>-->
+                        <!--<label>{{'SETTINGS.CATEGORY.LANGUAGE.ITALIAN' | translate}}</label>-->
+                    <!--</p>-->
+                    <!--<p (click)="setCurrentLang('ja')">-->
+                        <!--<label class="switch">-->
+                            <!--<span [ngClass]="{'checked': currentLang === 'ja'}"></span>-->
+                            <!--<span class="slider"></span>-->
+                        <!--</label>-->
+                        <!--<label>{{'SETTINGS.CATEGORY.LANGUAGE.JAPANESE' | translate}}</label>-->
+                    <!--</p>-->
+                    <!--<p (click)="setCurrentLang('es')">-->
+                        <!--<label class="switch">-->
+                            <!--<span [ngClass]="{'checked': currentLang === 'es'}"></span>-->
+                            <!--<span class="slider"></span>-->
+                        <!--</label>-->
+                        <!--<label>{{'SETTINGS.CATEGORY.LANGUAGE.SPANISH' | translate}}</label>-->
+                    <!--</p>-->
+                    <!--<p (click)="setCurrentLang('tr')">-->
+                        <!--<label class="switch">-->
+                            <!--<span [ngClass]="{'checked': currentLang === 'tr'}"></span>-->
+                            <!--<span class="slider"></span>-->
+                        <!--</label>-->
+                        <!--<label>{{'SETTINGS.CATEGORY.LANGUAGE.TURKISH' | translate}}</label>-->
+                    <!--</p>-->
+                    <p (click)="setCurrentLang('uk')">
+                        <label class="switch">
+                            <span [ngClass]="{'checked': currentLang === 'uk'}"></span>
+                            <span class="slider"></span>
+                        </label>
+                        <label>{{'SETTINGS.CATEGORY.LANGUAGE.UKRAINIAN' | translate}}</label>
+                    </p>
+                </div>
+            </tab>
+        </tabset>
+    </div>
+</div>

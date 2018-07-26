@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="row">
+        <h1 class="title">{{ 'CATEGORY.MOVIES' | translate }}</h1>
+        <div class="filter col col-md-3 col-lg-2">
+            <p (click)="filterMovies('all')" [ngClass]="{'active': filter === 'all'}">
+                {{ 'MOVIES.CATEGORY.ALL' | translate }}</p>
+            <p (click)="filterMovies('action')" [ngClass]="{'active': filter === 'action'}">
+                {{ 'MOVIES.CATEGORY.ACTION' | translate }}</p>
+            <p (click)="filterMovies('comedy')" [ngClass]="{'active': filter === 'comedy'}">
+                {{ 'MOVIES.CATEGORY.COMEDY' | translate }}</p>
+            <p (click)="filterMovies('drama')" [ngClass]="{'active': filter === 'drama'}">
+                {{ 'MOVIES.CATEGORY.DRAMA' | translate }}</p>
+            <p (click)="filterMovies('kids')" [ngClass]="{'active': filter === 'kids'}">
+                {{ 'MOVIES.CATEGORY.KIDS' | translate }}</p>
+            <p (click)="filterMovies('thriller')" [ngClass]="{'active': filter === 'thriller'}">
+                {{ 'MOVIES.CATEGORY.THRILLER' | translate }}</p>
+        </div>
+        <div class="movies col col-md-9 col-lg-10">
+            <!-- [options] - owl-carousel configs -->
+            <!-- If images array is dynamically changing pass this array to [items] input -->
+            <!-- carouselClasses] - classes to be attached along with owl-carousel class -->
+            <owl-carousel
+                    [options]="owlCarouselConfig"
+                    [items]="movies"
+                    [carouselClasses]="['owl-theme', 'sliding']">
+                <div class="item" *ngFor="let movie of movies; let i = index">
+                    <a routerLink="/movies/{{movie.id}}" class="movie col">
+                        <p class="movie-number">{{i + 1}}</p>
+                        <img src="{{moviesService.preparePathToCover(movie.cover)}}" alt="{{movie.name}}">
+                        <!--<img src="/api/src/movies/{{movie.cover}}" alt="{{movie.name}}">-->
+                        <h4>{{movie.name}}</h4>
+                        <p>{{movie.description}}</p>
+                        <p class="duration">
+                            <span class="icons icon-media icon-duration duration"></span>{{movie.duration}}
+                        </p>
+                    </a>
+                </div>
+            </owl-carousel>
+        </div>
+    </div>
+</div>

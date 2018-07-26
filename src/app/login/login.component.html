@@ -1,0 +1,58 @@
+<div class="login">
+    <div class="container">
+        <div class="row">
+            <carousel>
+                <slide>
+                    <h1>Welcome</h1>
+                </slide>
+                <slide>
+                    <h1>BIENVENIDOS</h1>
+                </slide>
+                <slide>
+                    <h1>BIENVENUE</h1>
+                </slide>
+				<slide>
+                    <h1>歡迎</h1>
+                </slide>				
+            </carousel>
+            <form name="form" (ngSubmit)="loginForm.form.valid && login()" #loginForm="ngForm" novalidate>
+                <div class="form-group">
+                    <input id="appium_login_name" class="form-control" name="login_name"
+                           placeholder="{{'LOGIN.NAME.TITLE' | translate }}" minlength="2" maxlength="30"
+                           [(ngModel)]="credentials.name" #login_name="ngModel" required/>
+                    <div *ngIf="login_name.invalid && (login_name.dirty || login_name.touched)" class="alert alert-danger">
+                        <div [hidden]="!login_name.hasError('minlength')">{{'LOGIN.NAME.MIN_LENGTH_ERROR' | translate }}</div>
+                        <div [hidden]="!login_name.hasError('maxlength')">{{'LOGIN.NAME.MAX_LENGTH_ERROR' | translate }}</div>
+                        <div [hidden]="!login_name.hasError('required')">{{'LOGIN.NAME.REQUIRED_ERROR' | translate }}</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input id="appium_login_email" type="email" class="form-control" name="login_email"
+                           placeholder="{{'LOGIN.EMAIL_ADDRESS.TITLE' | translate }}" required
+                           [(ngModel)]="credentials.email" #login_email="ngModel"
+                           pattern="[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9]+(?:\.[a-zA-Z0-9-]+)*"/>
+                    <div *ngIf="login_email.invalid && (login_email.dirty || login_email.touched)" class="alert alert-danger">
+                        <div [hidden]="!login_email.hasError('pattern')">{{'LOGIN.EMAIL_ADDRESS.INCORRECT_FORMAT_ERROR' | translate }}</div>
+                        <div [hidden]="!login_email.hasError('required')">{{'LOGIN.EMAIL_ADDRESS.REQUIRED_ERROR' | translate }}</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input id="accept" type="checkbox" name="login_accept"
+                           [(ngModel)]="credentials.accept" #login_accept="ngModel" required/>
+                    <label for="accept">{{'LOGIN.AGREEMENT.TITLE' | translate }}</label>
+                    <div *ngIf="login_accept.invalid && (login_accept.dirty || login_accept.touched)" class="alert alert-danger">
+                        <div [hidden]="!login_accept.hasError('required')">{{'LOGIN.AGREEMENT.REQUIRED_ERROR' | translate }}</div>
+                    </div>
+                </div>
+                <div class="alert alert-danger" *ngIf="invalidCredentials">
+                    <p>{{'LOGIN.INVALID_CREDENTIALS' | translate }}</p>
+                </div>
+                <div class="form-group">
+                    <button id="appium_login_submit" class="btn btn-action" [disabled]="!loginForm.form.valid">
+                        {{'LOGIN.SUBMIT' | translate }}
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

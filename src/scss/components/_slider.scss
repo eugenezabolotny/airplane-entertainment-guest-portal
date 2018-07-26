@@ -1,0 +1,64 @@
+.switch {
+  display: inline-block;
+  height: 20px;
+  position: relative;
+  width: 35px;
+
+  input {
+    display: none;
+
+    &:checked + .slider {
+      background-color: rgb(125, 161, 172);
+
+      &:before {
+        left: 0;
+        transform: translateX(16px);
+      }
+    }
+
+    &:focus + .slider {
+      box-shadow: 0 0 1px rgb(125, 161, 172);
+    }
+  }
+
+  span:not(.slider) {
+    display: none;
+
+    &.checked + .slider {
+      background-color: rgb(125, 161, 172);
+
+      &:before {
+        left: 0;
+        transform: translateX(16px);
+      }
+    }
+
+    &:focus + .slider {
+      box-shadow: 0 0 1px rgb(125, 161, 172);
+    }
+  }
+
+  .slider {
+    background-color: rgb(127, 127, 127);
+    border-radius: 20px;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    right: 0;
+    position: absolute;
+    transition: .4s;
+    top: 0;
+
+    &:before {
+      background-color: white;
+      border-radius: 50%;
+      bottom: 1px;
+      content: "";
+      height: 18px;
+      left: 1px;
+      position: absolute;
+      transition: .4s;
+      width: 18px;
+    }
+  }
+}

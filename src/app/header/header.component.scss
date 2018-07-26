@@ -1,0 +1,51 @@
+nav {
+  background-color: rgb(125, 161, 172);
+  height: 70px;
+  margin-bottom: 20px;
+
+  button {
+    background-color: rgb(127, 127, 127);
+    border: none;
+    margin-left: -16px;
+    padding: 0;
+    height: 70px;
+    width: 70px;
+
+    span {
+      margin: 0 auto;
+      transition: all 0.25s;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .fly-progress {
+    background-color: rgb(128, 128, 128);
+    border-radius: 5px;
+    height: 5px;
+    margin: auto;
+    width: 55%;
+
+    div.progress {
+      background-color: rgb(204, 204, 204);
+      height: 5px;
+      overflow: visible;
+      position: relative;
+      width: 10%;
+
+      div.plane {
+        background: url(/assets/img-min/icons.png) no-repeat center;
+        background-position-x: -76px;
+        background-position-y: -60px;
+        content: '';
+        height: 47px;
+        margin-top: -21px;
+        position: absolute;
+        right: 0;
+        width: 46px;
+      }
+    }
+  }
+}

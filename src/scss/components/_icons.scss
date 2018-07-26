@@ -1,0 +1,98 @@
+.icons {
+  background: url(/assets/img-min/icons.png) no-repeat center;
+  display: block;
+
+  // sidebar icons
+  &.icon-sidebar {
+    background-position-y: 0;
+    height: 37px;
+    width: 37px;
+
+    &.icon-home {
+      background-position-x: -1px;
+    }
+
+    &.icon-movies {
+      background-position-x: -45px;
+    }
+
+    &.icon-tv-shows {
+      background-position-x: -91px;
+    }
+
+    &.icon-music {
+      background-position-x: -141px;
+    }
+
+    &.icon-games {
+      background-position-x: -189px;
+    }
+
+    &.icon-flight-status {
+      background-position-x: -239px;
+    }
+
+    &.icon-settings {
+      background-position-x: -291px;
+    }
+  }
+
+  // header icons
+  &.icon-header {
+    background-position-y: -65px;
+    height: 21px;
+    width: 21px;
+
+    &.icon-opened {
+      background-position-x: -3px;
+    }
+
+    &.icon-closed {
+      background-position-x: -38px;
+    }
+  }
+  
+  // home icons
+  &.icon-category {
+    height: 130px;
+    width: 130px;
+
+    &.icon-movies-large,
+    &.icon-tv-shows-large,
+    &.icon-music-large {
+      background-position-y: -130px;
+    }
+
+    &.icon-games-large,
+    &.icon-flight-status-large,
+    &.icon-settings-large {
+      background-position-y: -269px;
+    }
+
+    &.icon-movies-large,
+    &.icon-games-large {
+      background-position-x: 0;
+    }
+
+    &.icon-tv-shows-large,
+    &.icon-flight-status-large{
+      background-position-x: -135px;
+    }
+
+    &.icon-music-large,
+    &.icon-settings-large {
+      background-position-x: -270px;
+    }
+  }
+
+  // movies icons
+  &.icon-media {
+    background-position-y: -79px;
+    height: 10px;
+    width: 10px;
+
+    &.icon-duration {
+      background-position-x: -140px;
+    }
+  }
+}

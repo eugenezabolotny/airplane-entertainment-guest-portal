@@ -1,0 +1,36 @@
+.btn-action {
+  background-color: rgba(107, 107, 107, 0.95);
+  border-radius: 50px;
+  color: white!important;
+  font-size: 12px;
+  font-weight: bold;
+  margin-left: calc(50% - 100px);
+  padding: 10px 5px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 200px;
+  &:focus,
+  &:hover {
+    box-shadow: none;
+    outline: none;
+  }
+}
+
+.back-button {
+  color: white!important;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 15px 0;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  i {
+    margin-right: 5px;
+  }
+
+  &:focus,
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+}
