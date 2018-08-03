@@ -19,7 +19,7 @@ switch (environment.api) {
         break;
     }
     case 'php': {
-        environment.serverUrl = 'http://' + environment.server + ':801/api/';
+        environment.serverUrl = 'http://' + environment.server + ':801/';
         break;
     }
 }
