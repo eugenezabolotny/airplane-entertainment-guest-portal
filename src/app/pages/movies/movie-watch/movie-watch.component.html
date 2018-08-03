@@ -4,7 +4,7 @@
             <i class="fa fa-angle-left" aria-hidden="true"></i>{{'MOVIES.MOVIE.BACK_BUTTON' | translate}}
         </a>
         <div class="col-12">
-            <vg-player>
+            <vg-player (onPlayerReady)="onPlayerReady($event)">
                 <vg-overlay-play></vg-overlay-play>
                 <vg-buffering></vg-buffering>
 
@@ -18,6 +18,8 @@
 
                     <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
 
+                    <!--<vg-quality-selector></vg-quality-selector>-->
+
                     <vg-scrub-bar></vg-scrub-bar>
 
                     <vg-time-display vgProperty="left" vgFormat="mm:ss"></vg-time-display>
@@ -30,8 +32,8 @@
                 </vg-controls>
 
                 <video #myMedia [vgMedia]="myMedia" id="my-video" type="video/mp4" poster="{{movie?.poster}}" crossorigin
-                       [vgHls]="movie?.path ? movie.path : 'assets/video/20170521_123403.mp4'"
-                       [vgDash]="movie?.path ? movie.path : 'assets/video/20170521_123403.mp4'">
+                       [vgHls]="movie?.path"
+                       [vgDash]="movie?.path">
                 </video>
             </vg-player>
         </div>

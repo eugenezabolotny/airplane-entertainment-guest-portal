@@ -11,7 +11,8 @@ export class AuthService {
     }
 
     isAuthorized() {
-        return !!localStorage.getItem('aircraftToken');
+        // return !!localStorage.getItem('aircraftToken');
+        return true;
     }
 
     authorize(response) {

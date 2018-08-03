@@ -8,20 +8,23 @@ import {ActivatedRoute} from '@angular/router';
     styleUrls: ['./movie.component.scss']
 })
 export class MovieComponent implements OnInit {
-    private movie: any;
+    public movie: any;
 
     constructor(private moviesService: MoviesService,
                 private route: ActivatedRoute) {
     }
 
     ngOnInit() {
+        console.log(+this.route.snapshot.paramMap.get('id'));
         this.getMovie(+this.route.snapshot.paramMap.get('id'));
     }
 
     getMovie(movieId: number) {
         this.moviesService.getMovie(movieId).subscribe(
-            // (response: any) => this.movie = response[0],
-            (response: any) => this.movie = response,
+            (response: any) => {
+              console.log(response);
+              this.movie = response
+            },
             (error: any) => console.log(error)
         );
     }

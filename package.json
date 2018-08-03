@@ -4,8 +4,12 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --proxy-config proxy.conf.json",
+    "start": "ng serve",
     "build": "ng build",
+    "build hornet1 py": "ng build --env=hornet1py",
+    "build hornet1 php": "ng build --env=hornet1php",
+    "build hornet2 py": "ng build --env=hornet2py",
+    "build hornet2 php": "ng build --env=hornet2php",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

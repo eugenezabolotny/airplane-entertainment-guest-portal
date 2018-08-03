@@ -7,7 +7,7 @@ import { environment } from '../../../environments/environment';
 @Injectable()
 export class MoviesService {
 
-    private storedMovie: any;
+    public storedMovie: any;
 
     constructor(private http: HttpClient) {
     }
@@ -37,13 +37,11 @@ export class MoviesService {
     }
 
     preparePathToCover(cover: string): string {
-        return `${environment.mediaUrl}src/movies/${cover}`;
-        // return `${environment.serverUrl}src/movies/${cover}`;
+        return `${environment.mediaUrl}api/src/movies/${cover}`;
     }
 
-    preparePathToMovie(movie: string): string {
-        return `${environment.mediaUrl}src/movies/${movie}`;
-        // return `${environment.serverUrl}${movie}`;
+    preparePathToMovie(movie: any): string {
+        return `${environment.mediaUrl}${movie.path}`;
     }
 
 }

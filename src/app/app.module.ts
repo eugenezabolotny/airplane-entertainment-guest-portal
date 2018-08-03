@@ -20,6 +20,7 @@ import {TestPlayerComponent} from './pages/test-player/test-player.component';
 // services
 import {AuthGuard, AuthInterceptor, AuthService} from './auth';
 import {LoginService} from './login/login.service';
+import { AnnouncementComponent } from './announcement/announcement.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
     return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -29,7 +30,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     declarations: [
         AppComponent,
         LoginComponent,
-        TestPlayerComponent
+        TestPlayerComponent,
+        AnnouncementComponent
     ],
     imports: [
         AppRoutingModule,

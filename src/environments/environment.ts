@@ -6,8 +6,8 @@
 export const environment: any = {
     production: false,
 
-    api: 'php',
-    // api: 'python',
+    // api: 'php',
+    api: 'python',
 
     server: '192.168.52.10',
     // server: '192.168.52.20',
@@ -19,9 +19,9 @@ switch (environment.api) {
         break;
     }
     case 'php': {
-        environment.serverUrl = 'http://' + environment.server + '/api/';
+        environment.serverUrl = 'http://' + environment.server + ':801/api/';
         break;
     }
 }
 
-environment.mediaUrl = 'http://192.168.52.20/api/';
+environment.mediaUrl = 'http://192.168.52.10:81/';
