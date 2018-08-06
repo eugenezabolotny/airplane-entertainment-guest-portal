@@ -9,8 +9,8 @@ export const environment: any = {
     // api: 'php',
     api: 'python',
 
-    server: '192.168.52.10',
-    // server: '192.168.52.20',
+    // server: '192.168.52.10',
+    server: '192.168.52.20',
 };
 
 switch (environment.api) {
