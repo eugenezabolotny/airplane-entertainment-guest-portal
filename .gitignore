@@ -64,3 +64,6 @@ typings/
 .next
 
 /dist/
+
+.htaccess
+.htaccess.*
