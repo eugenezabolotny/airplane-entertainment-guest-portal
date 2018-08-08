@@ -21,6 +21,7 @@ import {TestPlayerComponent} from './pages/test-player/test-player.component';
 import {AuthGuard, AuthInterceptor, AuthService} from './auth';
 import {LoginService} from './login/login.service';
 import { AnnouncementComponent } from './announcement/announcement.component';
+import { SocketService } from "./socket.service";
 
 export function HttpLoaderFactory(http: HttpClient) {
     return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -55,7 +56,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     providers: [
         AuthService,
         AuthGuard,
-        LoginService
+        LoginService,
+        SocketService
     ],
     bootstrap: [AppComponent]
 })
