@@ -27,7 +27,6 @@
                     <a routerLink="/movies/{{movie.id}}" class="movie col">
                         <p class="movie-number">{{i + 1}}</p>
                         <img src="{{moviesService.preparePathToCover(movie.cover)}}" alt="{{movie.name}}">
-                        <!--<img src="/api/src/movies/{{movie.cover}}" alt="{{movie.name}}">-->
                         <h4>{{movie.name}}</h4>
                         <p>{{movie.description}}</p>
                         <p class="duration">
