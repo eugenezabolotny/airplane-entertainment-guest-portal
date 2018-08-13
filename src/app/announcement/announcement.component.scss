@@ -1,12 +1,8 @@
 .announcement {
-    &-dblock {
+    &-block {
         display: block;
     }
-    &-dnone {
-        display: none;
-    }
-    display: block;
-    //display: none;
+    display: none;
     position: fixed;
     top: 0;
     bottom: 0;

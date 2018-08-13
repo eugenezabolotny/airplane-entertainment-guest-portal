@@ -29,7 +29,7 @@ export class SocketService {
     // HANDLER
     onNewMessage() {
         return Observable.create(observer => {
-            this.socket.on('play', msg => {
+            this.socket.on('message', msg => {
                 observer.next(msg);
             });
         });

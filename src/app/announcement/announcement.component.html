@@ -1,27 +1,25 @@
-<div class="announcement" [ngClass]="">
+<div class="announcement" [ngClass]="{'announcement-block': isAnnouncement}">
     <div class="container">
         <div class="row">
             <!--<h1 class="title ">{{'CATEGORY.SETTINGS' | translate}}</h1>-->
             <h1 class="title ">announcement</h1>
             <div class="col-12">
-                <vg-player>
-                    <vg-overlay-play></vg-overlay-play>
+                <vg-player (onPlayerReady)="onPlayerReady($event)">
+                    <!--<vg-overlay-play></vg-overlay-play>-->
                     <vg-buffering></vg-buffering>
 
-                    <vg-scrub-bar>
+                    <vg-scrub-bar style="pointer-events: none;">
                         <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
                         <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>
                     </vg-scrub-bar>
 
                     <vg-controls>
-                        <vg-play-pause></vg-play-pause>
-
-                        <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
-
-                        <vg-scrub-bar></vg-scrub-bar>
+                        <!--<vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>-->
 
                         <vg-time-display vgProperty="left" vgFormat="mm:ss"></vg-time-display>
-                        <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+                        <!--<vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>-->
+
+                        <vg-scrub-bar style="pointer-events: none;"></vg-scrub-bar>
 
                         <vg-mute></vg-mute>
                         <vg-volume></vg-volume>
@@ -29,16 +27,10 @@
                         <vg-fullscreen></vg-fullscreen>
                     </vg-controls>
 
-                    <video #myMedia [vgMedia]="myMedia" id="my-video" crossorigin>
-                        <!--<source src="http://192.168.52.10:81/api/src/movies/4knature_video1/4knature_video1.m3u8" type="video/mp4">-->
-                        <source src="http://192.168.52.10:81/api/src/movies/1/SampleVideo_1280x720_5mb.mp4"
-                                type="video/mp4">
+                    <video #myMedia [vgMedia]="myMedia" id="my-video" crossorigin
+                            [vgHls]="mediaUrl ? mediaUrl : ''"
+                           [vgDash]="mediaUrl ? mediaUrl : ''">
                     </video>
-
-                    <!--<video #myMedia [vgMedia]="myMedia" id="my-video" type="video/mp4" poster="{{movie?.poster}}" crossorigin
-                           [vgHls]="movie?.path ? movie.path : 'assets/video/20170521_123403.mp4'"
-                           [vgDash]="movie?.path ? movie.path : 'assets/video/20170521_123403.mp4'">
-                    </video>-->
                 </vg-player>
             </div>
         </div>

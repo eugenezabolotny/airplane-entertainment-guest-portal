@@ -1,7 +1,7 @@
-import {Component, OnInit} from '@angular/core';
-import {MoviesService} from '../movies.service';
-import {ActivatedRoute} from '@angular/router';
-import {VgAPI} from 'videogular2/core';
+import { Component, OnInit } from '@angular/core';
+import { MoviesService } from '../movies.service';
+import { ActivatedRoute } from '@angular/router';
+import { VgAPI } from 'videogular2/core';
 
 @Component({
     selector: 'app-movie-watch',
@@ -28,21 +28,21 @@ export class MovieWatchComponent implements OnInit {
                 this.movie = response;
                 this.movie.path = this.moviesService.preparePathToMovie(response);
             },
-                (error: any) => console.log(error)
-            );
-        }
+            (error: any) => console.log(error)
+        );
+    }
 
-    onPlayerReady(api: VgAPI){
-      this.playerApi = api;
+    onPlayerReady(api: VgAPI) {
+        this.playerApi = api;
 
-      //play video
-      this.playerApi.getDefaultMedia().subscriptions.canPlay.subscribe(()=>{
-        this.playerApi.play();
-      });
+        //play video
+        this.playerApi.getDefaultMedia().subscriptions.canPlay.subscribe(() => {
+            this.playerApi.play();
+        });
 
-      //auto replay video
-      this.playerApi.getDefaultMedia().subscriptions.ended.subscribe(()=>{
-        this.playerApi.getDefaultMedia().currentTime = 0;
-      });
+        //auto replay video
+        this.playerApi.getDefaultMedia().subscriptions.ended.subscribe(() => {
+            this.playerApi.getDefaultMedia().currentTime = 0;
+        });
     }
 }
