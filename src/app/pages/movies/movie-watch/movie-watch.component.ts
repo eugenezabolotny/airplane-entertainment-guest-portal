@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MoviesService } from '../movies.service';
 import { ActivatedRoute } from '@angular/router';
 import { VgAPI } from 'videogular2/core';
+import { SocketService } from "../../../socket.service";
 
 @Component({
     selector: 'app-movie-watch',
@@ -13,13 +14,24 @@ export class MovieWatchComponent implements OnInit {
     public movie: any;
     public playerApi: VgAPI;
     public bitrates: any = {name: 'test'};
+    announcementMessage: string;
 
     constructor(private moviesService: MoviesService,
-                private route: ActivatedRoute) {
+                private route: ActivatedRoute,
+                private socketService: SocketService) {
     }
 
     ngOnInit() {
         this.getMovie(+this.route.snapshot.paramMap.get('id'));
+        this.socketService.announcementMessage.subscribe(
+            message => {
+                this.announcementMessage = message;
+                if (this.announcementMessage === 'stop') {
+                    this.onPlay();
+                } else if (this.announcementMessage === 'play') {
+                    this.onStop();
+                }
+            });
     }
 
     getMovie(movieId: number) {
@@ -44,5 +56,13 @@ export class MovieWatchComponent implements OnInit {
         this.playerApi.getDefaultMedia().subscriptions.ended.subscribe(() => {
             this.playerApi.getDefaultMedia().currentTime = 0;
         });
+    }
+
+    onStop() {
+        this.playerApi.pause();
+    }
+
+    onPlay() {
+        this.playerApi.play();
     }
 }

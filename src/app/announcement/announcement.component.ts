@@ -12,21 +12,21 @@ export class AnnouncementComponent implements OnInit {
     public isAnnouncement = false;
     public mediaUrl: string;
     public playerApi: VgAPI;
+    announcementMessage: string;
+
 
     constructor(private socketService: SocketService) { }
 
     ngOnInit() {
         this.socketService.onNewMessage().subscribe(msg => {
             if (msg !== 'stop') {
-                this.isAnnouncement = true;
-                this.mediaUrl = msg;
-                this.onAnnouncement();
+                this.onAnnouncement(msg);
             } else {
-                this.isAnnouncement = false;
-                this.mediaUrl = '';
                 this.onStop();
             }
         });
+        this.socketService.announcementMessage.subscribe(
+            message => this.announcementMessage = message);
     }
 
     sendMsg() {
@@ -37,20 +37,29 @@ export class AnnouncementComponent implements OnInit {
         this.playerApi = api;
     }
 
-    onAnnouncement() {
-        //play video
+    newAnnouncementMessage(msg: string) {
+        this.socketService.changeAnnouncementMessage(msg);
+    }
+
+    onAnnouncement(msg) {
+        this.isAnnouncement = true;
+        this.mediaUrl = msg;
         this.playerApi.getDefaultMedia().subscriptions.canPlay.subscribe(() => {
             this.playerApi.play();
+            this.newAnnouncementMessage('play');
         });
 
-        //remove layer when playback completes
         this.playerApi.getDefaultMedia().subscriptions.ended.subscribe(() => {
             this.isAnnouncement = false;
             this.mediaUrl = '';
+            this.newAnnouncementMessage('stop');
         });
     }
 
     onStop() {
+        this.isAnnouncement = false;
+        this.mediaUrl = '';
         this.playerApi.pause();
+        this.newAnnouncementMessage('stop');
     }
 }

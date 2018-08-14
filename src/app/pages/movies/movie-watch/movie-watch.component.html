@@ -4,7 +4,7 @@
             <i class="fa fa-angle-left" aria-hidden="true"></i>{{'MOVIES.MOVIE.BACK_BUTTON' | translate}}
         </a>
         <div class="col-12">
-            <vg-player (onPlayerReady)="onPlayerReady($event)">
+            <vg-player *ngIf="movie" (onPlayerReady)="onPlayerReady($event)">
                 <vg-overlay-play></vg-overlay-play>
                 <vg-buffering></vg-buffering>
 

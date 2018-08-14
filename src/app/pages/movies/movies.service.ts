@@ -37,7 +37,6 @@ export class MoviesService {
     }
 
     preparePathToCover(cover: string): string {
-        // return `${environment.mediaUrl}api/src/movies/${cover}`;
         return `${environment.mediaUrl}api/src/movies/${cover}`;
     }
 
