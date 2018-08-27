@@ -15,22 +15,23 @@ export class AnnouncementComponent implements OnInit {
     announcementMessage: string;
 
 
+    // TODO: uncomment all above to enable socket
     constructor(private socketService: SocketService) { }
 
     ngOnInit() {
-        this.socketService.onNewMessage().subscribe(msg => {
-            if (msg !== 'stop') {
-                this.onAnnouncement(msg);
-            } else {
-                this.onStop();
-            }
-        });
-        this.socketService.announcementMessage.subscribe(
-            message => this.announcementMessage = message);
+        // this.socketService.onNewMessage().subscribe(msg => {
+        //     if (msg !== 'stop') {
+        //         this.onAnnouncement(msg);
+        //     } else {
+        //         this.onStop();
+        //     }
+        // });
+        // this.socketService.announcementMessage.subscribe(
+        //     message => this.announcementMessage = message);
     }
 
     sendMsg() {
-        this.socketService.sendMessage(this.msgInput);
+        // this.socketService.sendMessage(this.msgInput);
     }
 
     onPlayerReady(api: VgAPI) {
@@ -38,7 +39,7 @@ export class AnnouncementComponent implements OnInit {
     }
 
     newAnnouncementMessage(msg: string) {
-        this.socketService.changeAnnouncementMessage(msg);
+        // this.socketService.changeAnnouncementMessage(msg);
     }
 
     onAnnouncement(msg) {

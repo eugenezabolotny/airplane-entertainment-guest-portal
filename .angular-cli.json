@@ -32,10 +32,10 @@
       "environments": {
         "dev": "environments/environment.ts",
         "prod": "environments/environment.prod.ts",
-        "hornet1py": "environments/environment.hornet1.py.ts",
-        "hornet2py": "environments/environment.hornet2.py.ts",
-        "hornet1php": "environments/environment.hornet1.php.ts",
-        "hornet2php": "environments/environment.hornet1.php.ts"
+        "apache.py": "environments/environment.apache.py.ts",
+        "nginx.py": "environments/environment.nginx.py.ts",
+        "apache.php": "environments/environment.apache.php.ts",
+        "nginx.php": "environments/environment.nginx.php.ts"
       }
     }
   ],

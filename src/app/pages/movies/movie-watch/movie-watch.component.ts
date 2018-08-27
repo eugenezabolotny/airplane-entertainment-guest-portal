@@ -23,15 +23,16 @@ export class MovieWatchComponent implements OnInit {
 
     ngOnInit() {
         this.getMovie(+this.route.snapshot.paramMap.get('id'));
-        this.socketService.announcementMessage.subscribe(
-            message => {
-                this.announcementMessage = message;
-                if (this.announcementMessage === 'stop') {
-                    this.onPlay();
-                } else if (this.announcementMessage === 'play') {
-                    this.onStop();
-                }
-            });
+        // TODO: uncomment to enable socket
+        // this.socketService.announcementMessage.subscribe(
+        //     message => {
+        //         this.announcementMessage = message;
+        //         if (this.announcementMessage === 'stop') {
+        //             this.onPlay();
+        //         } else if (this.announcementMessage === 'play') {
+        //             this.onStop();
+        //         }
+        //     });
     }
 
     getMovie(movieId: number) {

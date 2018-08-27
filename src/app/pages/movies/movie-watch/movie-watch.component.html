@@ -4,7 +4,7 @@
             <i class="fa fa-angle-left" aria-hidden="true"></i>{{'MOVIES.MOVIE.BACK_BUTTON' | translate}}
         </a>
         <div class="col-12">
-            <vg-player *ngIf="movie" (onPlayerReady)="onPlayerReady($event)">
+            <vg-player (onPlayerReady)="onPlayerReady($event)">
                 <vg-overlay-play></vg-overlay-play>
                 <vg-buffering></vg-buffering>
 
@@ -31,9 +31,10 @@
                     <vg-fullscreen></vg-fullscreen>
                 </vg-controls>
 
-                <video #myMedia [vgMedia]="myMedia" id="my-video" type="video/mp4" poster="{{movie?.poster}}" crossorigin
-                       [vgHls]="movie?.path"
-                       [vgDash]="movie?.path">
+                <video #myMedia [vgMedia]="myMedia" id="my-video" type="video/mp4" crossorigin
+                       poster="{{movie?.poster ? movie.poster : ''}}"
+                       [vgHls]="movie?.path ? movie.path : ''"
+                       [vgDash]="movie?.path ? movie.path : ''">
                 </video>
             </vg-player>
         </div>

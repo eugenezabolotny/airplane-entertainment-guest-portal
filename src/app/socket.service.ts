@@ -6,39 +6,41 @@ import { BehaviorSubject } from "rxjs";
 @Injectable()
 export class SocketService {
     private host = 'http://localhost:5000';
+    // private host = 'http://192.168.52.10:5000';
     private socket: any;
     private announcementMessageSource = new BehaviorSubject('default message');
     announcementMessage = this.announcementMessageSource.asObservable();
 
+    // TODO: uncomment all above to enable socket
     constructor() {
-        this.socket = io(this.host);
-        this.socket.on('connect', () => this.onConnect());
-        this.socket.on('disconnect', () => this.onDisconnect());
+        // this.socket = io(this.host);
+        // this.socket.on('connect', () => this.onConnect());
+        // this.socket.on('disconnect', () => this.onDisconnect());
     }
 
     onConnect() {
-        this.socket.connect();
+        // this.socket.connect();
     }
 
     onDisconnect() {
-        this.socket.disconnect();
+        // this.socket.disconnect();
     }
 
     // EMITTER
     sendMessage(msg: string) {
-        this.socket.emit('message', msg);
+        // this.socket.emit('message', msg);
     }
 
     // HANDLER
     onNewMessage() {
-        return Observable.create(observer => {
-            this.socket.on('guest', msg => {
-                observer.next(msg);
-            });
-        });
+        // return Observable.create(observer => {
+        //     this.socket.on('guest', msg => {
+        //         observer.next(msg);
+        //     });
+        // });
     }
 
     changeAnnouncementMessage(message: string) {
-        this.announcementMessageSource.next(message);
+        // this.announcementMessageSource.next(message);
     }
 }

@@ -12,13 +12,13 @@ export class MoviesService {
     constructor(private http: HttpClient) {
     }
 
-    storeMovie(movie: Movie) {
-        this.storedMovie = movie;
-    }
-
-    getStoredMovie(): Observable<Movie> {
-        return this.storedMovie;
-    }
+    // storeMovie(movie: Movie) {
+    //     this.storedMovie = movie;
+    // }
+    //
+    // getStoredMovie(): Observable<Movie> {
+    //     return this.storedMovie;
+    // }
 
     removeStoredMovie() {
         this.storedMovie = [];
