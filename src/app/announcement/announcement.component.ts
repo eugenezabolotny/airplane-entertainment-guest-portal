@@ -15,7 +15,7 @@ export class AnnouncementComponent implements OnInit {
     announcementMessage: string;
 
 
-    // TODO: uncomment all above to enable socket
+    // TODO: uncomment all below to enable socket
     constructor(private socketService: SocketService) { }
 
     ngOnInit() {

@@ -11,7 +11,7 @@ export class SocketService {
     private announcementMessageSource = new BehaviorSubject('default message');
     announcementMessage = this.announcementMessageSource.asObservable();
 
-    // TODO: uncomment all above to enable socket
+    // TODO: uncomment all below to enable socket
     constructor() {
         // this.socket = io(this.host);
         // this.socket.on('connect', () => this.onConnect());
